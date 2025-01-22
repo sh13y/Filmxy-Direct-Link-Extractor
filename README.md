@@ -7,12 +7,12 @@ Just drop in an IMDb ID, and watch the magic happen! 🍿✨
 
 ## Features
 
-🔍 Quick IMDb code search (faster than finding your TV remote)
-🔗 Automatic link extraction (like a digital ninja)
-📋 One-click copy (because who has time for right-clicks?)
-🌙 Dark mode (for your 3 AM movie hunts)
-💾 Remembers your last search (better memory than a goldfish)
-🎯 Simple UI (so simple, your cat could use it)
+- 🔍 Quick IMDb code search (faster than finding your TV remote)
+- 🔗 Automatic link extraction (like a digital ninja)
+- 📋 One-click copy (because who has time for right-clicks?)
+- 🌙 Dark mode (for your 3 AM movie hunts)
+- 💾 Remembers your last search (better memory than a goldfish)
+- 🎯 Simple UI (so simple, your cat could use it)
 
 ## Installation
 
@@ -54,20 +54,21 @@ So easy, you can do it with one hand while eating popcorn with the other! 🍿
 
 ### Project Structure 
 
+```
 filmxy-link-extractor/
-├── manifest.json # Extension configuration
-├── popup.html # Extension popup interface
-├── popup.js # Popup functionality
-├── background.js # Background service worker
-├── icons/ # Extension icons
+├── manifest.json        # Extension configuration
+├── popup.html          # Extension popup interface
+├── popup.js            # Popup functionality
+├── background.js       # Background service worker
+├── icons/             # Extension icons
 │   ├── icon16.png
 │   ├── icon32.png
 │   ├── icon48.png
 │   └── icon128.png
-├── screenshots/ # Extension screenshots
+├── screenshots/       # Extension screenshots
 │   └── screenshot.png
-└── README.md # Documentation
-
+└── README.md          # Documentation
+```
 
 ### Features in Detail
 
