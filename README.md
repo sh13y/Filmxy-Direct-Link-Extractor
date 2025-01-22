@@ -17,17 +17,17 @@ Just drop in an IMDb ID, and watch the magic happen! 🍿✨
 ## Installation
 
 ### From Chrome Web Store
-> "Want it from the Chrome Web Store? Well..." 
-> 
-> Me: *checks wallet* 🔍
-> Wallet: *laughs in empty* 😂
-> Chrome Store: "That'll be $5" 🤑
-> Me: "Best I can do is manual installation" 💁‍♂️
+> "Want it from the Chrome Web Store? Well..."  
+>  
+> Me: *checks wallet* 🔍  
+> Wallet: *laughs in empty* 😂  
+> Chrome Store: "That'll be $5" 🤑  
+> Me: "Best I can do is manual installation" 💁‍♂️  
 
 ### Manual Installation (Developer Mode)
-> Welcome to the cool kids' club! 😎
-> Where we don't need no stinking Web Store! 
-> (Also, I'm $5 richer than those other devs) 💰
+> Welcome to the cool kids' club! 😎  
+> Where we don't need no stinking Web Store!  
+> (Also, I'm $5 richer than those other devs) 💰 
 
 1. Download or clone this repository
 2. Open Chrome and go to `chrome://extensions/`
