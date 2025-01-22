@@ -1,0 +1,55 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Node modules (if you add them in future)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build output (if you add a build process in future)
+dist/
+build/
+
+# Extension packaging
+*.zip
+*.crx
+*.pem
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Debug logs
+debug.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Operating System generated files
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+$RECYCLE.BIN/
+
+# Chrome Extension specific
+*.crx
+*.pem
+*.zip
+web-ext-artifacts/
+
+# Screenshots (optional, depending on whether you want to version control them)
+# screenshots/ 

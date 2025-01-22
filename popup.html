@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IMDB Search</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 350px;
+      padding: 16px;
+      background-color: #1a1b1e;
+      color: #e9ecef;
+    }
+
+    .search-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    input {
+      flex: 1;
+      padding: 10px 12px;
+      border: 2px solid #2d2f33;
+      border-radius: 8px;
+      font-size: 14px;
+      background-color: #2d2f33;
+      color: #e9ecef;
+      transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+      color: #868e96;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #5c7cfa;
+      box-shadow: 0 0 0 3px rgba(92, 124, 250, 0.2);
+    }
+
+    button {
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #5c7cfa;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #4c6ef5;
+      transform: translateY(-1px);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .link-section {
+      background-color: #2d2f33;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .link-section h3 {
+      color: #e9ecef;
+      font-size: 16px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #404348;
+    }
+
+    .link-section ul {
+      list-style-type: none;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+
+    .link-section li {
+      margin: 8px 0;
+      padding: 10px;
+      background-color: #1a1b1e;
+      border-radius: 6px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      word-break: break-all;
+      color: #adb5bd;
+    }
+
+    .link-section li:hover {
+      background-color: #404348;
+      color: #e9ecef;
+    }
+
+    #copyAllButton {
+      width: 100%;
+      margin-top: 12px;
+      background-color: #5c7cfa;
+    }
+
+    #copyAllButton:hover {
+      background-color: #4c6ef5;
+    }
+
+    /* Scrollbar styling */
+    .link-section ul::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .link-section ul::-webkit-scrollbar-track {
+      background: #1a1b1e;
+      border-radius: 4px;
+    }
+
+    .link-section ul::-webkit-scrollbar-thumb {
+      background: #404348;
+      border-radius: 4px;
+    }
+
+    .link-section ul::-webkit-scrollbar-thumb:hover {
+      background: #4c4f54;
+    }
+
+    /* Copy feedback animation */
+    @keyframes copyFeedback {
+      0% { background-color: #5c7cfa; }
+      100% { background-color: #1a1b1e; }
+    }
+
+    .copied {
+      animation: copyFeedback 1s ease;
+    }
+
+    /* Add subtle glow effect to buttons */
+    button {
+      box-shadow: 0 0 10px rgba(92, 124, 250, 0.2);
+    }
+
+    #copyAllButton {
+      box-shadow: 0 0 10px rgba(64, 192, 87, 0.2);
+    }
+
+    /* Add hover effect to the entire link section */
+    .link-section {
+      transition: transform 0.3s ease;
+    }
+
+    .link-section:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Add these styles */
+    .loading {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .status-message {
+      text-align: center;
+      padding: 8px;
+      margin: 8px 0;
+      border-radius: 6px;
+      font-size: 13px;
+      display: none;
+    }
+
+    .status-message.success {
+      background-color: rgba(64, 192, 87, 0.2);
+      color: #5c7cfa;
+      display: block;
+    }
+
+    .status-message.error {
+      background-color: rgba(255, 71, 87, 0.2);
+      color: #ff4757;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="imdbCode" placeholder="Enter IMDb code (e.g., tt1234567)">
+    <button id="searchButton">Search</button>
+  </div>
+
+  <div id="statusMessage" class="status-message"></div>
+
+  <div class="link-section" id="links">
+    <h3>Download Link</h3>
+    <ul id="linkList"></ul>
+    <button id="copyAllButton">Copy Link</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html> 
